@@ -11,23 +11,27 @@ $(function() {
 		// Stop the browser from submitting the form.
 		
 		e.preventDefault();
-		// function sendMail() {
-			var link = "mailto:cybersolutions502@gmail.com"
-					 + "?cc=myCCaddress@example.com"
-					 + "&subject=" + encodeURIComponent("This is my subject")
-					 + "&body=" + encodeURIComponent(document.getElementById('message').value)
-			;
+		// // function sendMail() {
+		// 	var link = "mailto:cybersolutions502@gmail.com"
+		// 			 + "?cc=myCCaddress@example.com"
+		// 			 + "&subject=" + encodeURIComponent("This is my subject")
+		// 			 + "&body=" + encodeURIComponent(document.getElementById('message').value)
+		// 	;
 			
-			window.location.href = link;
-		// }
+		// 	window.location.href = link;
+		// // }
 
 		// Serialize the form data.
 		var formData = $(form).serialize();
 
 		// Submit the form using AJAX.
-		$.ajax({
-			type: 'POST',
-			url: $(form).attr('action'),
+						$.ajax({
+							type: 'POST',
+							url: $(form).attr(('cybersolutions502@gmail.com', 'mailto:?subject='
+							+ encodeURIComponent("This is my subject")
+							+ "&body=" 
+							+ encodeURIComponent("This is my body")
+				)),
 			data: formData
 		})
 		.done(function(response) {

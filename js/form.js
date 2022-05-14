@@ -10,6 +10,15 @@ $(function() {
 	$(form).submit(function(e) {
 		// Stop the browser from submitting the form.
 		e.preventDefault();
+		// function sendMail() {
+			var link = "mailto:cybersolutions502@gmail.com"
+					 + "?cc=myCCaddress@example.com"
+					 + "&subject=" + encodeURIComponent("This is my subject")
+					 + "&body=" + encodeURIComponent(document.getElementById('message').value)
+			;
+			
+			window.location.href = link;
+		// }
 
 		// Serialize the form data.
 		var formData = $(form).serialize();

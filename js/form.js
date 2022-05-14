@@ -9,6 +9,7 @@ $(function() {
 	// Set up an event listener for the contact form.
 	$(form).submit(function(e) {
 		// Stop the browser from submitting the form.
+		
 		e.preventDefault();
 		// function sendMail() {
 			var link = "mailto:cybersolutions502@gmail.com"
